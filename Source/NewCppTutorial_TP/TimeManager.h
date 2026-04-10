@@ -29,14 +29,15 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
 	// This is the current active factor of time
 	UPROPERTY(BlueprintReadOnly)
 	float CurrentTimeFactor = 1.0f;
+
+public:
 	// Magic time values
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float NormalTimeFactor = 1.0f;
-	UPROPERTY(BlueprintReadWrite) 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float ReverseTimeFactor = -3.0f;
 	
 };
